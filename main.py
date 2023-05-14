@@ -38,7 +38,7 @@ class CNNModel(nn.Module):
     
     def forward(self, x):
         '''
-        Forward takes a 5D tensor (a stack of RGB images) and produces a set of 
+        Forward takes a 5D tensor (a stack of RGB images) and produces a set of 25 one-hot encoded class labels
         '''
         out = self.conv_layer1(x)
         out = self.conv_layer2(out)
