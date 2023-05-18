@@ -1,3 +1,5 @@
+![](helloworld.gif)
+<br><br>
 main.py contains the the model and training code <br>
 gstream.py contains code for webcam streaming into model inference <br>
 reorder.py was used to create test and training csvs from a larger dataset <br>
