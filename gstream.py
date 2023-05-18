@@ -64,11 +64,15 @@ text = None
 color = None
 word = None
 font = cv2.FONT_HERSHEY_SIMPLEX
+i = 1
 while True:
     if frame is not None:
         frame = cv2.cvtColor(frame, cv2.COLOR_BGRA2BGR)
         rsframe = cv2.resize(frame, (112,112))
-        frame_list.append(rsframe)
+        if i % 2 == 0:
+            frame_list.append(rsframe)
+            i = 0
+        i = i + 1
         if len(frame_list) == 25:
             frames = torch.stack([transforms.functional.to_tensor(frame) for frame in frame_list])
             frames = frames.permute(1,0,2,3)
