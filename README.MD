@@ -1,3 +1,5 @@
+# Sign Language Translation using Machine Learning
+<br>
 ![](helloworld.gif)
 <br><br>
 main.py contains the the model and training code <br>
