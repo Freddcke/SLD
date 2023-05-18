@@ -62,7 +62,7 @@ def main():
     ''' 
     Generate model is used for 3DResnet which is used as a comparison for performance
     '''
-    net = generate_model(50).to(device)#CNNModel().to(device)
+    net = CNNModel().to(device) #generate_model(50).to(device)
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(net.parameters(), lr=1e-6)
     '''
